@@ -7,9 +7,33 @@
 //
 
 #include <iostream>
+#include <iomanip>
+#include <cmath>
 
-int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
+using namespace std;
+
+int main()
+{
+    float fltUserAngle,
+          fltAnswerSine,
+          fltAnswerCosine,
+          fltAnswerTangent;
+    
+    cout << "Please enter an angle in radians: " << endl;
+    cin >> fltUserAngle;
+    
+    fltAnswerSine = sin(fltUserAngle);
+    fltAnswerCosine = cos(fltUserAngle);
+    fltAnswerTangent = tan(fltUserAngle);
+    
+    cout << setprecision(4) << fixed << showpoint;
+    
+    cout << "Your angle " << fltUserAngle << " has the following values: " << endl
+         << "Sine: " << fltAnswerSine << endl
+         << "Cosine: " << fltAnswerCosine << endl
+         << "Tangent: " << fltAnswerTangent << endl;
+    
     return 0;
 }
+
+
